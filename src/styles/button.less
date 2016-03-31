@@ -1,0 +1,35 @@
+.translate-button {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: width 0s 300ms, height 0s 300ms, opacity 300ms ease-in-out;
+  z-index: 2147483647;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    min-width: initial;
+    min-height: initial;
+    border-radius: 3px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 1px 2px 5px rgba(0,0,0, 0.3);
+  }
+
+  &.visible-translate-button {
+    opacity: 1;
+    width: 24px;
+    height: 24px;
+    transition: width 0s, height 0s, opacity 300ms ease-in-out;
+  }
+
+}

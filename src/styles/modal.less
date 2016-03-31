@@ -1,0 +1,120 @@
+.translate-modal-container {
+  display: table;
+  margin: 0 auto;
+  background: #fff;
+  width: 600px;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 2px 26px rgba(0, 0, 0, .3), 0 0 0 1px rgba(0, 0, 0, .1);
+
+  .translate-modal-header {
+    position: relative;
+    background: #333;
+    padding: 5px 10px;
+  }
+
+  .translate-modal-image {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+  }
+
+  .translate-modal-title {
+    position: absolute;
+    padding-left: 120px;
+    margin: 15px;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 18px;
+  }
+
+  .translate-modal-content {
+    overflow: auto;
+  }
+
+}
+
+.translate-table-container {
+  font-size: 14px;
+  line-height: 18px;
+  border-style: solid;
+  border-color: #333;
+  border-width: 0 5px 10px;
+
+  .translate-table-header {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #c9c9c9;
+  }
+
+  .translate-table-content {
+    position: relative;
+  }
+
+}
+
+.translate-table-row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-bottom: solid 1px #e5e5e5;
+
+  &:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  &:hover {
+    background-color: #ececec;
+  }
+
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+    box-sizing: content-box;
+  }
+
+  a,
+  a:link {
+    color: #333;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  a:hover,
+  a:focus,
+  a:link:hover,
+  a:link:focus {
+    color: #333;
+    text-decoration: underline;
+  }
+
+  .translate-order-column {
+    width: 45px;
+    border-right: solid 1px #e5e5e5;
+  }
+
+  .translate-purpose-column {
+    width: 30px;
+    font-style: italic;
+  }
+
+  .translate-order-column,
+  .translate-purpose-column {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .translate-first-column,
+  .translate-second-column {
+    padding: 10px 15px;
+    border-right: solid 1px #e5e5e5;
+  }
+
+}
