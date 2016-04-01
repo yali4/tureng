@@ -1,3 +1,7 @@
+.translate-overlay-active {
+  overflow: hidden;
+}
+
 .translate-overlay-wrapper {
   position: fixed;
   display: block;
@@ -8,10 +12,10 @@
   width: 0;
   height: 0;
   opacity: 0;
-  overflow: hidden;
   color: #333;
   font-family: Helvetica,Arial,sans-serif;
-  background: rgba(0,0,0, 0.4);
+  background: rgba(0,0,0, 0.55);
+  overflow: hidden;
   transition: width 0s 300ms, height 0s 300ms, opacity 300ms ease-in-out;
   z-index: 2147483647;
 
@@ -19,6 +23,8 @@
     opacity: 1;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
     transition: width 0s, height 0s, opacity 300ms ease-in-out;
   }
 
@@ -34,7 +40,7 @@
   .translate-overlay-content {
     display: table-cell;
     vertical-align: middle;
-    padding: 0;
+    padding: 60px 0;
   }
 
 }

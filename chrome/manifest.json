@@ -1,7 +1,7 @@
 {
   "name": "Tureng Anlık Çeviri",
   "manifest_version": 2,
-  "version": "1.13",
+  "version": "1.14",
   "description": "Gezinti esnasında çeviri imkanı sunar.",
   "author": "Yalçın Ceylan",
   "permissions": ["storage"],
@@ -14,9 +14,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*/*"],
+      "matches": ["http://*/*","https://*/*"],
       "js": ["source/application.min.js"],
-	  "css": ["source/application.min.css"]
+	  "css": ["source/application.min.css"],
+      "run_at": "document_end"
     }
   ],
   "background": {

@@ -35,12 +35,7 @@
 	{
 		return this.modal;
 	};
-	
-	Modal.prototype.autoHeight = function()
-	{
-		this.content.style.maxHeight = (window.innerHeight * 0.80) + "px";
-	};
-	
+
 	Modal.prototype.renderTitle = function(title, total)
 	{
 		this.title.innerHTML = "&ldquo;" + title + "&rdquo; teriminin sözlükteki anlamları: " + total + " sonuç";
@@ -107,9 +102,7 @@
 	Modal.prototype.render = function(title, total, elements)
 	{
 		this.empty();
-		
-		this.autoHeight();
-		
+
 		this.renderTitle(title, total);
 		
 		this.renderContent(elements);

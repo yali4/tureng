@@ -12,6 +12,11 @@
 	{
 		this.container = TurengHelper.createElement("div", { "class" : Classes.container });
 	}
+
+    Dialog.prototype.getContext = function()
+    {
+        return this.container;
+    };
 	
 	Dialog.prototype.loading = function()
 	{

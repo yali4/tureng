@@ -1,16 +1,17 @@
 .translate-modal-container {
-  display: table;
+  position: relative;
   margin: 0 auto;
-  background: #fff;
-  width: 600px;
-  overflow: hidden;
-  border-radius: 3px;
+  padding: 0;
+  width: 640px;
+  background: transparent;
   box-shadow: 0 2px 26px rgba(0, 0, 0, .3), 0 0 0 1px rgba(0, 0, 0, .1);
+  border-radius: 6px;
 
   .translate-modal-header {
     position: relative;
     background: #333;
     padding: 5px 10px;
+    border-radius: 6px 6px 0 0;
   }
 
   .translate-modal-image {
@@ -34,7 +35,11 @@
   }
 
   .translate-modal-content {
-    overflow: auto;
+    background: #fff;
+    border-style: solid;
+    border-color: #333;
+    border-width: 0 5px 0 5px;
+    border-radius: 0 0 6px 6px;
   }
 
 }
@@ -42,9 +47,7 @@
 .translate-table-container {
   font-size: 14px;
   line-height: 18px;
-  border-style: solid;
-  border-color: #333;
-  border-width: 0 5px 10px;
+  border-bottom: solid 10px #333;
 
   .translate-table-header {
     padding: 5px 10px;

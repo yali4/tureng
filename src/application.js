@@ -147,6 +147,12 @@
 		event.stopPropagation();
 	
 	});
+
+    dialog.getContext().addEventListener("click", function(event){
+
+        event.stopPropagation();
+
+    });
 	
 	document.addEventListener("mouseup", function(){
 	

@@ -4,7 +4,8 @@
 		"overlay" : "translate-overlay-wrapper",
 		"visible" : "visible-translate-overlay-wrapper",
 		"container" : "translate-overlay-container",
-		"content" : "translate-overlay-content"
+		"content" : "translate-overlay-content",
+        "body" : "translate-overlay-active"
 	};
 
 	function Overlay()
@@ -34,6 +35,8 @@
 	
 	Overlay.prototype.hide = function()
 	{
+        document.body.classList.remove(Classes.body);
+
 		this.overlay.classList.remove(Classes.visible);
 		
 		return this;
@@ -41,6 +44,8 @@
 	
 	Overlay.prototype.show = function()
 	{
+        document.body.classList.add(Classes.body);
+
 		this.overlay.classList.add(Classes.visible);
 		
 		return this;
