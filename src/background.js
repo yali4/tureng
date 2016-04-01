@@ -1,4 +1,4 @@
-chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
 	var xhttp = new XMLHttpRequest();
 	xhttp.open("GET", "http://tureng.com/tr/turkce-ingilizce/" + encodeURIComponent(request.selectedText), false);

@@ -32,8 +32,8 @@
 		overlay.show();
 		
 		dialog.loading().appendTo(overlay.getContent());
-		
-		chrome.extension.sendRequest({selectedText: selectedText}, function(xhttp) {
+
+        chrome.runtime.sendMessage({selectedText: selectedText}, function(xhttp) {
 	
 			dialog.remove();
 						
