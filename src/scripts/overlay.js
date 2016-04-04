@@ -5,7 +5,7 @@
 		"visible" : "visible-translate-overlay-wrapper",
 		"container" : "translate-overlay-container",
 		"content" : "translate-overlay-content",
-        "body" : "translate-overlay-active"
+        "opened" : "translate-overlay-opened"
 	};
 
 	function Overlay()
@@ -35,7 +35,9 @@
 	
 	Overlay.prototype.hide = function()
 	{
-        document.body.classList.remove(Classes.body);
+        document.documentElement.classList.remove(Classes.opened);
+
+        document.body.classList.remove(Classes.opened);
 
 		this.overlay.classList.remove(Classes.visible);
 		
@@ -44,7 +46,9 @@
 	
 	Overlay.prototype.show = function()
 	{
-        document.body.classList.add(Classes.body);
+        document.documentElement.classList.add(Classes.opened);
+
+        document.body.classList.add(Classes.opened);
 
 		this.overlay.classList.add(Classes.visible);
 		
