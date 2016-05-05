@@ -1,15 +1,23 @@
 (function(){
 
-	var Classes = { "button" : "translate-button", "visible" : "visible-translate-button" };
-	
+	var Classes = { "button" : "translate-button", "visible" : "visible-translate-button", "icon" : "translate-button-icon" };
+
 	var ButtonIcon = chrome.extension.getURL("icons/24x24.png");
 
 	function Button()
 	{
-		this.button = TurengHelper.createElement("button", { "class" : Classes.button });
-		
-		this.button.style.backgroundImage = "url(" + ButtonIcon + ")";
-		
+		this.button = TurengHelper.createElement("a", { "class" : Classes.button, "href" : "" });
+
+        this.icon = TurengHelper.createElement("img", { "class" : Classes.icon, "src" : ButtonIcon });
+
+        this.icon.onload = function()
+        {
+            this.style.width = this.naturalWidth + "px";
+            this.style.height = this.naturalHeight + "px";
+        };
+
+        this.button.appendChild(this.icon);
+
 		document.body.appendChild(this.button);	
 	}
 	
@@ -39,8 +47,8 @@
 		var top = window.scrollY + rect.top;
 		
 		var left = window.scrollX + rect.left + rect.width + 10;
-		
-		var height = this.button.offsetHeight;
+
+        var height = this.button.offsetHeight;
 		
 		if ( height > rect.height )
 		{

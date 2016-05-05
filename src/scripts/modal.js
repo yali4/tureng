@@ -15,10 +15,16 @@
 		this.modal = TurengHelper.createElement("div", { "class" : Classes.modal });
 			
 		this.header = TurengHelper.createElement("div", { "class" : Classes.header });
-		
-		var image = TurengHelper.createElement("img", { "class" : Classes.image, "src" : ModalIcon });
-		
-		this.header.appendChild(image);
+
+        this.image = TurengHelper.createElement("img", { "class" : Classes.image, "src" : ModalIcon });
+
+        this.image.onload = function()
+        {
+            this.style.width = this.naturalWidth + "px";
+            this.style.height = this.naturalHeight + "px";
+        };
+
+		this.header.appendChild(this.image);
 		
 		this.title = TurengHelper.createElement("div", { "class" : Classes.title, "html" : "" });
 		
