@@ -5,7 +5,8 @@
 		"visible" : "visible-translate-overlay-wrapper",
 		"container" : "translate-overlay-container",
 		"content" : "translate-overlay-content",
-        "opened" : "translate-overlay-opened"
+        "opened" : "translate-overlay-opened",
+		"height" : "translate-overlay-auto-height"
 	};
 
 	function Overlay()
@@ -44,7 +45,11 @@
 	{
         document.documentElement.classList.remove(Classes.opened);
 
+		document.documentElement.classList.remove(Classes.height);
+
         document.body.classList.remove(Classes.opened);
+		
+		document.body.classList.remove(Classes.height);
 
 		this.overlay.classList.remove(Classes.visible);
 
@@ -59,7 +64,11 @@
 	{
         document.documentElement.classList.add(Classes.opened);
 
+		document.documentElement.classList.add(Classes.height);
+
         document.body.classList.add(Classes.opened);
+
+		document.body.classList.add(Classes.height);
 
         this.overlay.classList.add(Classes.visible);
 
